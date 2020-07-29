@@ -99,6 +99,14 @@ All of the OSX instructions assume `homebrew` is your [package manager](https://
       PG_CPPFLAGS='-DACCEPT_USE_OF_DEPRECATED_PROJ_API_H -I/usr/local/include' CFLAGS='-DACCEPT_USE_OF_DEPRECATED_PROJ_API_H -I/usr/local/include' pex install postgis
 
    It may be MUCH easier to use the Postgres.app which makes installing the correct combination of Postgresql and PostGIS versions.
+   This can be found here: 
+   ```
+   https://postgresapp.com/downloads.html
+   ```
+   How to configure the path for the command tools associated with Postgres.app
+   ```
+   https://postgresapp.com/documentation/cli-tools.html
+   ```
 1. Install ImageMagick
    - `brew install imagemagick`
 1. Install Poppler
