@@ -123,6 +123,12 @@ describe Preneeds::Service do
 
     context 'with no attachments' do
       it 'creates a preneeds application', run_at: 'Tue, 21 Nov 2017 23:03:55 GMT' do
+        VCR.configure do |c|
+          c.allow_http_connections_when_no_cassette = true
+        end
+        allow(burial_form).to receive(:preneed_attachments).and_return([])
+        subject.receive_pre_need_application burial_form
+        binding.pry; fail
         expect_any_instance_of(Preneeds::BurialForm).to receive(:generate_tracking_number).and_return(
           'J1g4L0d13DrkhM0TpdVG'
         )
