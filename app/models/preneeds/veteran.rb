@@ -67,7 +67,7 @@ module Preneeds
       }
 
       %i[
-        dateOfBirth dateOfDeath vaClaimNumber placeOfBirth militaryServiceNumber race
+        dateOfBirth dateOfDeath vaClaimNumber placeOfBirth militaryServiceNumber
       ].each { |key| hash.delete(key) if hash[key].blank? }
 
       hash
