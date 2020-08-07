@@ -14,8 +14,8 @@ FactoryBot.define do
     military_status { 'A' }
     race do
       [
-        build(:race, race_cd: 'I'),
-        build(:race, race_cd: 'A')
+        # build(:race, race_cd: 'I'),
+        # build(:race, race_cd: 'A')
       ]
     end
 

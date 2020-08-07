@@ -127,6 +127,7 @@ describe Preneeds::Service do
           c.allow_http_connections_when_no_cassette = true
         end
         allow(burial_form).to receive(:preneed_attachments).and_return([])
+        # TODO test no race
         res = subject.receive_pre_need_application burial_form
         binding.pry; fail
         expect_any_instance_of(Preneeds::BurialForm).to receive(:generate_tracking_number).and_return(
