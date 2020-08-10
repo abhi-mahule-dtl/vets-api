@@ -106,6 +106,7 @@ module Common
         end.env
       rescue Common::Exceptions::BackendServiceException => e
         # convert BackendServiceException into a more meaningful exception title for Sentry
+        binding.pry; fail
         raise config.service_exception.new(
           e.key, e.response_values, e.original_status, e.original_body
         )
