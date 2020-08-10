@@ -103,6 +103,7 @@ module Preneeds
       )
 
       body_and_headers = build_body_and_headers(soap, burial_form)
+      puts body_and_headers[:body]
 
       json = with_monitoring { perform(:post, '', body_and_headers[:body], body_and_headers[:headers]).body }
       Raven.extra_context(response: json)
